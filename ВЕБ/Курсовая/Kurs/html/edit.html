@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Document</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container container">
+				<div class="header__left">
+					<div href="" class="header__avatar">
+					</div>
+				</div>
+				<div class="header__right">
+					<nav class="header__nav">
+						<ul class="header__list">
+							<li>
+								<a href="index.html" class="header__link">Главная</a>
+							</li>
+							<li>
+								<a href="contacts.html" class="header__link">Контакты</a>
+							</li>
+							<li>
+								<a href="help.html" class="header__link">Помощь</a>
+							</li>
+							<li>
+								<a href="vacancies.html" class="header__link">Вакансии</a>
+							</li>
+							<li>
+								<a href="another.html" class="header__link">Прочее</a>
+							</li>
+						</ul>
+					</nav>
+					<div class="header__login">
+						<a href="login.html" class="header__button log__button">Войти</a>
+						<a href="signup.html" class="header__button reg__button">Регистрация</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="main">
+			<div class="main__container container">
+				<div class="edit__title title">Редактирование профиля</div>
+				<form action="" class="form__edit" method="post">
+					<div class="edit__items-container edit__items-container-fdc">
+						<div class="user__avatar-edit ibg">
+							<img src="img/avatars/1.jpg" alt="Ваше фото">
+						</div>
+						<div class="edit__items">
+							<div class="edit__item">
+								<div class="edit__photo">
+									<input type="file" accept=".png, .jpg" class="edit__photo-input" id="user-photo" name="user-photo" value="1">
+									<label for="user-photo" class="edit__photo-label">Изменить фото</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="edit__items-container">
+
+
+						<h2 class="edit__title">О себе:</h2>
+						<div class="edit__items">
+							<div class="edit__item">
+								<label for="user-about"></label>
+								<textarea name="user-about" id="user-about" cols="30" rows="10" class="user-about"></textarea>
+							</div>
+						</div>
+
+
+
+
+						<h2 class="edit__title">Навыки:</h2>
+						<div class="edit__items edit__items-skills">
+							<div class="edit__item">
+								<div class="checkbox">
+									<input type="checkbox" class="checkbox__input" id="user-skills-videoediting"
+										name="user-skills-videoediting" value="1">
+									<label class="checkbox__label" for="user-skills-videoediting">Монтаж видео</label>
+								</div>
+							</div>
+							<div class="edit__item">
+								<div class="checkbox">
+									<input type="checkbox" class="checkbox__input" id="user-skills-photoshop"
+										name="user-skills-photoshop" value="1">
+									<label class="checkbox__label" for="user-skills-photoshop">знание фотошопа</label>
+								</div>
+							</div>
+							<div class="edit__item">
+								<div class="checkbox">
+									<input type="checkbox" class="checkbox__input" id="user-skills-coding"
+										name="user-skills-coding" value="1">
+									<label class="checkbox__label" for="user-skills-coding">Программирование</label>
+								</div>
+							</div>
+						</div>
+
+
+					</div>
+					<div class="edit__items-container">
+						<div class="edit__items">
+							<div class="edit__item">
+								<div class="edit__buttons">
+									<button type="submit" name="isSave" class="btn edit__btn">Сохранить</button>
+									<a href="#" class="btn back__btn">Назад</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container container">
+				<div class="footer__content">Все права защищены © 2022</div>
+			</div>
+		</footer>
+	</div>
+	<script src="js/script.js"></script>
+</body>
+
+</html>

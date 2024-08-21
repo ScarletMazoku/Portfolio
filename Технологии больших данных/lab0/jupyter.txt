@@ -1,0 +1,58 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: ndorzhu-414205
+  name: lab0-jupyter
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jupyter-spark
+  template:
+    metadata:
+      labels:
+        jupyter: lab0
+        app: jupyter-spark
+    spec:
+      volumes:
+      - name: jupyter-config
+        configMap:
+          name: lab0-jupyter-cm
+      - name: shared-storage
+        persistentVolumeClaim:
+          claimName: pvc-shared-ndorzhu-414205
+          readOnly: true
+      - name: nfs-home-storage
+        persistentVolumeClaim:
+          claimName: pvc-ndorzhu-414205
+          readOnly: false
+      serviceAccountName: spark
+      containers:
+      - name: jupyter
+        image: node03.st:5000/pyspark-hdfs-jupyter:ndorzhu-414205
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8282
+        command: [ "start-notebook.sh" ]
+        args: [ "--NotebookApp.token='F9DL3a464G'" ]
+        resources:
+          requests:
+            memory: "2Gi"
+            cpu: "1"
+          limits:
+            memory: "2Gi"
+            cpu: "1"
+        volumeMounts:
+          - mountPath: /home/jovyan/.jupyter/jupyter_notebook_config.py
+            name: jupyter-config
+            readOnly: true
+          - mountPath: "/home/jovyan/shared-data"
+            name: shared-storage
+            readOnly: true
+          - mountPath: "/home/jovyan/nfs-home"
+            name: nfs-home-storage
+            readOnly: false
+          - mountPath: "/home/jovyan/.m2"
+            name: shared-storage
+            readOnly: true
+            subPath: "maven_m2"

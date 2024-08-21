@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>Лабораторная №1</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <form action="http://localhost/check.php" method="post">
+            <font size="6" align="center">
+                <b>
+                    Оставить отзыв о сервисе
+                </b>
+            </font>
+            <br>
+            <br>
+            <table border="1" cellspacing="0" cellpadding="12">
+                <tbody>
+                    <tr>
+                        <td align="center">
+                            Ваше имя:<br><input type="text"size="39" name = "FirstName"><br>
+                            Дата обращения:<br><input type="date" size="39" name = "RequestDate"><br>
+                            Дата решения проблемы:<br><input type="date" size="39" name = "SolutionDate"><br>
+                        </td>
+                        <td align="center">
+                            Укажите сотрудников, которые участвовали в решении вашей проблемы:<br>
+                            <select name="select" size="3" multiple>
+                                <option selected value="Иванов И.В.">Иванов И.В.</option>
+                                <option value="Сурикатов Т.Ш.">Сурикатов Т.Ш.</option>
+                                <option value="Ромашкова А.И">Ромашкова А.И</option>
+                                <option value="Титов И.А.">Титов И.А.</option>
+                            </select><br>
+                        </td>
+                        <td align="center">
+                            Оцените общее впечатление от сервиса: <br>
+                            1<input type="range" min="1" max="5" name = "Rate">5
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">
+                            <input type="radio" name = "d">Личное обращение<br>
+                            <input type="radio" name = "e">Онлайн-обращение<br>
+                            Адрес офиса:
+                            <select size=1 name = "Address">
+                                <option>Ул. Горшочников д.3
+                                <option>Ул. 1-я Синичкина д.3
+                                <option>Ул. Красноказарменная д.14
+                            </select>
+                        </td>
+                        <td colspan="2" align="center">
+                            Укажите, с чем была связана проблема:<br> 
+                            <textarea name = "About"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" align="center">Отметьте моменты, которые, по вашему мнению, соответствуют действительности:</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td align="center">
+                            <input type=checkbox name = "a">Отзывчивость сотрудников<br>
+                            <input type=checkbox name = "b">Готовность к решению проблемы<br>
+                            <input type=checkbox name = "c">Компетентность<br>
+                            <input type=checkbox name = "f">Вежливость<br>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="right">Опишите моменты, над которыми нам стоит поработать:</td>
+                        <td rowspan="3" align="center">
+                            <textarea name = "Moments"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">Будете ли вы обращаться к нам за помощью снова?</td>
+                        <td align="center">
+                            <input type="radio" name = "g">Да 
+                            <input type="radio" name = "h">Нет 
+                            <input type="radio" name = "i">Возможно
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <input type="submit" value="Оставить отзыв">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </body>
+</html>

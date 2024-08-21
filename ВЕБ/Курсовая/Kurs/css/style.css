@@ -1,0 +1,972 @@
+@font-face {
+   font-family: 'Tapestry'; 
+   src: url("../fonts/Tapestry-Regular.ttf"); 
+}
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+textarea{
+   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+html,
+body{
+   height: 100%;
+   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+   background: #eee;
+   color: #333;
+}
+a{
+   text-decoration: none;
+   color: inherit;
+}
+/*================ibg================*/
+.ibg{
+
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   position: relative;
+   }
+   
+   .ibg img{
+   
+   width: 0px;
+   height: 0px;
+   position: absolute;
+   top: 0;
+   left: 0;
+   opacity: 0;
+   visibility: hidden;
+   z-index: 100;
+   }
+/*=============================*/
+.wrapper{
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+}
+.container{
+   max-width: 1200px;
+   width: 100%;
+   margin: 0 auto;
+   padding: 0px 10px;
+}
+.btn{
+   width: 100%;
+   height: 40px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 25px;
+   color: #fff;
+   font-size: 18px;
+   transition: all 0.2s ease 0s;
+}
+.title{
+   font-weight: 700;
+   font-size: 28px;
+   text-align: center;
+   margin-top: 20px;
+}
+.subtitle{
+   margin-bottom: 10px;
+   font-size: 20px;
+   font-weight: 600;
+}
+.colorRed{
+   color: red;
+}
+.listTypeNone{
+   list-style-type: none;
+}
+.main{
+   flex: 1 1 auto;
+   margin: 20px 0px;
+}
+/*===========КАСТОМ ЧЕКБОКСОВ=========*/
+.checkbox {
+   position: relative;
+}
+.checkbox__input {
+   appearance: none;
+   position: absolute;
+
+}
+.checkbox__label {
+   padding-left: 25px;
+   cursor: pointer;
+}
+.checkbox__label:hover{
+   color: #000;
+}
+.checkbox__label::before{
+   content: "";
+   display: block;
+   width: 16px;
+   height: 16px;
+   border: 1px solid #333;
+   border-radius: 5px;
+   background: #fff;
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 1;
+   transition: all 0.1s linear 0s;
+}
+.checkbox__label::after{
+   content: "";
+   display: block;
+   width: 16px;
+   height: 16px;
+   border: 1px solid transparent;
+   opacity: 0;
+   background: url('../img/checkbox/icon-done.svg') no-repeat;
+   background-size: 16px 16px;
+
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 2;
+   transition: all 0.1s linear 0s;
+}
+.checkbox__input:checked + .checkbox__label{
+   color: #000;
+}
+.checkbox__input:checked + .checkbox__label::before{
+   background: rgb(16, 186, 16);
+   border-color: rgb(16, 186, 16);
+}
+.checkbox__input:checked + .checkbox__label::after{
+   opacity: 1;
+}
+/*===========HEADER============*/
+.header{
+   height: 60px;
+   flex: 0 0 auto;
+   width: 100%;
+   background: #333;
+   color: #fff;
+}
+.header__container {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   height: 100%;
+}
+.header__logo{
+   font-family: 'Tapestry', cursive;
+   color: #fff;
+   font-size: 36px;
+}
+.header__left {
+   display: flex;
+   align-items: center;
+
+}
+.header__left > *{
+   margin-right: 20px;
+}
+.header__left > *:last-child{
+   margin-right: 0px;
+}
+.header__username{
+   border-bottom: 2px solid transparent;
+   transition: all 0.2s linear 0s;
+
+}
+.header__username:hover{
+   border-color: #fff;
+}
+.header__avatar {
+   display: block;
+   height: 50px;
+   min-width: 50px;
+   width: 50px;
+   border-radius: 50%;
+}
+.header__avatar img{
+   width: 100%;
+   min-height: 100%;
+}
+.header__right {
+   display: flex;
+   justify-content: end;
+   align-items: center; 
+}
+.header__list {
+   display: flex;
+   list-style-type: none;
+}
+.header__list li{
+   margin-right: 25px;
+}
+.header__link {
+   text-transform: uppercase;
+   font-weight: bold;
+   transition: all 0.2s ease 0s;
+   border-bottom: 2px solid transparent;
+
+}
+.header__link:hover{
+   border-color: #fff;
+}
+.header__button {
+   padding: 5px 10px;
+   border: 2px solid #fff;
+   border-radius: 15px;
+   color: #fff;
+   transition: all 0.2s ease 0s;
+   margin-right: 8px;
+
+}
+.header__button:last-child{
+   margin-right: 0;
+}
+.reg__button{
+   background: rgb(12, 149, 12);
+   border-color: rgb(12, 149, 12);
+}
+.reg__button:hover{
+   background: rgb(16, 186, 16);
+   border-color: rgb(16, 186, 16);
+}
+.log__button:hover{
+   background: rgb(241, 130, 11);
+   border-color: rgb(241, 130, 11);
+}
+/*===========footer============*/
+.footer{
+   height: 60px;
+   flex: 0 0 auto;
+   width: 100%;
+   background: #333;
+}
+.footer__container{
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.footer__content{
+   color: #fff;
+   font-size: 14px;
+   letter-spacing: 2px;
+}
+/*==============Форма авторизации================*/
+.form{
+   width: 340px;
+   background: #fafafa;
+   text-align: center;
+   border-radius: 10px;
+   overflow: hidden;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+.form__top {
+   width: 100%;
+   background: #333;
+   padding: 15px 0px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.form__top-image {
+   display: inline-block;
+}
+.form__title {
+   font-size: 24px;
+   color: rgb(255, 255, 255);
+   line-height: 0.833;
+   display: inline-block;
+}
+.form__content {
+   margin: 35px auto;
+   max-width: 270px;
+}
+.form__item {
+   margin-bottom: 20px;
+   width: 100%;
+   border-radius: 5px;
+
+   position: relative;
+}
+.form__item:last-child {
+   margin-bottom: 0;
+}
+.form__errormsg{
+   color: red;
+   font-size: 14px;
+   text-align: left;
+   position: absolute;
+   top: -10px;
+}
+.form__input {
+   width: 100%;
+   height: 45px;
+   border: 2px solid #e0e0e0;
+   padding: 10px;
+}
+
+.form__input-image {
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   right: 5px;
+}
+.form__button {
+   width: 100%;
+   border: none;
+   background: rgb(12, 149, 12);
+   height: 45px;
+   color: #fff;
+   font-size: 18px;
+   letter-spacing: 1px;
+   transition: all 0.2s linear 0s;
+   margin-top: 10px;
+}
+.form__button:hover {
+   background: rgb(16, 186, 16);
+}
+.form__bottom {
+   width: 100%;
+   background: #333;
+   padding: 15px 0px;
+   color: #fff;
+}
+.form__span{
+   opacity: 0.7;
+}
+.form__link-reg {
+   font-weight: 600;
+}
+.form__link-reg:hover{
+   text-decoration: underline;
+}
+/*==============USER===============*/
+.user{
+   border-bottom: 5px solid #333;
+   padding-bottom: 15px;
+   margin-bottom: 15px;
+}
+.user:last-child{
+   border-bottom: 0px solid #333;
+   padding-bottom: 0px;
+   margin-bottom: 0px;
+}
+.user__content {
+   display: flex;
+}
+.user__content > *{
+   margin-right: 30px;
+}
+.user__content > *:last-child{
+   margin-right: 0;
+}
+.user__avatar {
+   flex: 0 0 auto;
+   position: relative;
+   border: 5px solid #333;
+   height: 200px;
+   width: 200px;
+   border-radius: 50%;
+}
+.user__left{
+   display: flex;
+   flex-direction: column;
+}
+.user__left > *{
+   margin-bottom: 25px;
+}
+.user__left > *:last-child{
+   margin-bottom: 0px;
+}
+
+.button__change{
+   background: rgb(12, 149, 12);
+}
+.button__change:hover{
+   background: rgb(16, 186, 16);
+}
+.button__logout{
+   background: rgb(241, 130, 11);
+}
+.button__logout:hover{
+   background: rgb(255, 132, 0);
+}
+.user__item{
+   margin-bottom: 20px;
+}
+.user__item:last-child{
+   margin-bottom: 00px;
+}
+.user__info {
+   flex: 1 1 auto;
+}
+.user__title{
+   margin-bottom: 10px;
+}
+.user__title-nv {
+   text-align: center;
+}
+.user__info > *{
+   margin-bottom: 12px;
+}
+.user__info > *:last-child{
+   margin-bottom: 0px;
+}
+.user__completeCount{
+   display: flex;
+   align-items: center;
+}
+
+.name__text{
+   font-size: 18px;
+}
+.email__text{
+   font-size: 18px;
+}
+.user__about {
+   text-align: justify;
+}
+.about__text{
+   font-size: 18px;
+}
+.skills__list {
+   font-size: 18px;
+   list-style-type: decimal;
+}
+.skills__list li{
+   margin-bottom: 10px;
+}
+.skills__list li:last-child{
+   margin-bottom: 0px;
+}
+.button__addVacancy-container{
+   display: flex;
+   justify-content: flex-end;
+}
+.button__addVacancy{
+   width: 120px;
+   border: 3px solid #333;
+   color: #333;
+   text-align: right;
+}
+.button__addVacancy:hover{
+   color: #fff;
+   background: rgb(16, 186, 16);
+   border: 3px solid rgb(16, 186, 16);;
+}
+/*============EDIT=================*/
+.form__edit {
+   margin: 30px 0;
+}
+.edit__content {
+   display: flex;
+}
+.edit__content > *{
+   margin-right: 30px;
+}
+.edit__content > *:last-child{
+   margin-right: 0;
+}
+.edit__avatar {
+   flex: 0 0 auto;
+   position: relative;
+   border: 5px solid #333;
+   height: 200px;
+   width: 200px;
+   border-radius: 50%;
+}
+.edit__left{
+   display: flex;
+   flex-direction: column;
+   position: relative;
+}
+.edit__left > *{
+   margin-bottom: 25px;
+}
+.edit__left > *:last-child{
+   margin-bottom: 0px;
+}
+.edit__right{
+   display: flex;
+   flex-direction: column;
+   flex: 1 1 auto;
+   position: relative;
+}
+.edit__right > *{
+   margin-bottom: 20px;
+}
+.edit__right > *:last-child{
+   margin-bottom: 0px;
+}
+.edit__photo {
+   margin-top: 10px;
+   text-align: center;
+}
+.edit__photo-input {
+   display: none;
+}
+.edit__photo-label {
+   opacity: 0.8;
+   border-bottom: 2px solid transparent;
+   transition: all 0.2s linear 0s;
+
+}
+.edit__photo-label:hover{
+   opacity: 1;
+   border-bottom: 2px solid #333;
+}
+.edit__photo-preview{
+   position: absolute;
+   top: 0;
+   left: 0;
+   border: 5px solid #333;
+   height: 200px;
+   width: 200px;
+   border-radius: 50%;
+   overflow: hidden;
+   z-index: 3;
+}
+.edit__photo-preview img{
+   width: 100%;
+   height: 100%;
+   position: relative;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%) scale(1.5);
+   object-fit: cover;
+   
+}
+.edit__title {
+   margin-bottom: 10px;
+}
+.edit__items {
+   flex: 1 1 auto;
+   width: 100%;
+
+}
+
+.edit__item {
+   margin-bottom: 15px;
+}
+.edit__item:last-child{
+   margin-bottom: 0;
+}
+.edit__input{
+   font-size: 18px;
+   padding: 5px;
+}
+.form__errormsg-edit{
+   bottom: 0;
+}
+.user__textarea{
+   width: 100%;
+   min-width: 430px;
+   max-width: 950px;
+   min-height: 180px;
+   max-height: 180px;
+   font-size: 18px;
+   padding: 5px;
+}
+
+.button__save{
+   background: rgb(12, 149, 12);
+   border: none;
+}
+.button__save:hover{
+   background: rgb(16, 186, 16);
+}
+.button__back{
+   background: rgb(241, 130, 11);
+   border: none;
+}
+.button__back:hover{
+   background: rgb(255, 132, 0);
+}
+/*=============Вакансии==============*/
+.vacancies__items {
+   display: flex;
+   flex-direction: column;
+}
+.vacancies__item {
+   display: flex;
+   position: relative;
+   margin-top: 20px;
+   border: 2px solid #333;
+   padding: 10px;
+   border-radius: 10px;
+   background: #fff;
+   transition: all 0.2s linear 0s;
+}
+.acancies__item-left{
+   flex: 0 0 auto;
+   margin-right: 10px;
+   width: 130px;
+}
+.acancies__item-left > *{
+   margin-bottom: 10px;
+}
+.acancies__item-left > *:last-child{
+   margin-bottom: 0;
+}
+.vacancies__item-img {
+   height: 130px;
+   width: 130px;
+   border-radius: 50%;
+   border: 5px solid #333;
+}
+.vacancies_button-do{
+   background: rgb(12, 149, 12);
+   cursor: pointer;
+   border: none;
+}
+.vacancies_button-do:hover{
+   background: rgb(16, 186, 16);
+   border-color: rgb(16, 186, 16);
+}
+.vacancies_button-disabled{
+   background: rgb(107, 111, 107);
+   border: none;
+}
+.vacancies__item-content{
+   flex: 1 1 auto;
+   position: relative;
+}
+.vacancies__item-content > *{
+   margin-bottom: 15px;
+}
+.vacancies__item-content > *:last-child{
+   margin-bottom: 0px;
+}
+.vacancies__item-title {
+   font-size: 24px;
+   font-weight: 600; 
+}
+.vacancies__item-username {
+   font-style: italic;
+   font-size: 18px;
+}
+.greenline {
+   display: block;
+   width: 75px;
+   height: 3px;
+   background: rgb(16, 186, 16);
+}
+.vacancies__item-text {
+   text-align: justify;
+   font-size: 18px;
+   
+}
+.form_deletevacancy-input{
+   display: none;
+}
+.vacancies__cross{
+   display: inline-block;
+   width: 25px;
+   height: 25px;
+   position: absolute;
+   top: 0;
+   right: 0;
+   opacity: 0.8;
+   transition: all 0.1s linear 0s;
+   border: none;
+   background: none;
+   z-index: 15;
+   cursor: pointer;
+}
+.vacancies__cross:hover{
+   opacity: 1.0;
+   transform: scale(1.1);
+}
+.vacancies__cross-item::before, .vacancies__cross-item::after{
+   content: "";
+   width: 100%;
+   height: 3px;
+   background: #333;
+   position: absolute;
+}
+.vacancies__cross-item::before{
+   top: 50%;
+   left: 0;
+   transform: rotate(45deg);
+}
+.vacancies__cross-item::after{
+   top: 50%;
+   left: 0;
+   transform: rotate(-45deg);
+}
+.vacancies_button-number{
+   display: none;
+}
+.vacancies__skills{
+   display: flex;
+   justify-content: flex-start;
+}
+.vacancies__skills-title {
+   font-size: 18px;
+   margin-right: 15px;
+   font-weight: 600;
+}
+.vacancies__skills-title-list {
+   list-style-type: none;
+   display: flex;
+   font-size: 18px;
+}
+.vacancies__skills-title-list li{
+   margin-right: 15px;
+}
+.vacancies__skills-title-list li:last-child{
+   margin-right: 0px;
+}
+/*==========Добавление вакансии==========*/
+.addVacancy__form{
+   text-align: left;
+   width: 780px;
+   background: #fafafa;
+   border-radius: 10px;
+   overflow: hidden;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+.form__content-vac{
+   display: flex;
+   flex-direction: column;
+   align-items: start;
+   padding: 20px;
+}
+.form__content-vac > *{
+   margin-bottom: 20px;
+}
+.form__content-vac > *:last-child{
+   margin-bottom: 0px;
+}
+.addVacancy__description{
+   width: 100%;
+}
+.addVacancy__title{
+   margin-bottom: 5px;
+}
+.addVacancy__top{
+   display: flex;
+   width: 100%;
+   justify-content: space-between;
+   margin-bottom: 0;
+}
+
+.addVacancy__name , .addVacancy__skills{
+   width: 49%;
+}
+.vacancyTitle__input{
+   width: 100%;
+   font-size: 18px;
+   padding: 5px;
+}
+.addVacancy__textarea{
+   width: 100%;
+   min-width: 430px;
+   max-width: 740px;
+   min-height: 180px;
+   max-height: 180px;
+   font-size: 18px;
+   padding: 5px;
+}
+.addVacancy__buttons{
+   display: flex;
+   width: 100%;
+   justify-content: space-between;
+   position: relative;
+}
+.form__errormsg-vac{
+   top: -20px;
+}
+.form__bottom-vac{
+   height: 50px;
+   background: #333;
+}
+.button__add{
+   width: 49%;
+   background: rgb(12, 149, 12);
+   border: none;
+}
+.button__add:hover{
+   background: rgb(16, 186, 16);
+}
+.button__back-vac{
+   width: 49%;
+   background: rgb(241, 130, 11);
+   border: none;
+}
+.button__back-vac:hover{
+   background: rgb(255, 132, 0);
+}
+/*============ADMIN=================*/
+.admin__tabs {
+   display: flex;
+   height: 100%;
+}
+.tabs__items {
+   width: 250px;
+   height: 100%;
+   position: fixed;
+   display: flex;
+   flex-direction: column;
+   padding: 20px 0px;
+   background: #333;
+   font-weight: 700;
+   color: #fff;
+   text-transform: uppercase;
+   z-index: 10;
+}
+.tabs__items-top{
+   display: flex;
+   flex-direction: column;
+   flex: 1 1 auto;
+}
+.tabs__items-bottom{
+   flex: 0 0 auto;
+}
+.tabs__item {
+   height: 50px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: #333;
+   transition: all 0.2s linear 0s;  
+}
+.tabs__item:hover{
+   background: rgb(16, 186, 16);
+}
+.tabs__item span{
+   position: relative;
+   z-index: 100;
+}
+.admin__body {
+   /*border: 2px solid #333;*/
+   font-size: 18px;
+   margin-left: 250px;
+   width: 100%;
+}
+.tabs__block {
+   padding: 0 20px 30px 20px;
+   display: none;
+}
+.tabs__block:target{
+   display: block;
+}
+.tabs__block::before{
+   content: '';
+   height: 50px;
+   width: 250px;
+   position: fixed;
+   left: 0;
+   background: rgb(12, 149, 12);
+   z-index: 11;
+}
+.tabs__block:nth-child(1)::before{
+   top: 20px;
+   
+}
+.tabs__block:nth-child(2)::before{
+   top: 70px;
+}
+.tabs__block::after{
+   height: 50px;
+   width: 250px;
+   position: fixed;
+   left: 0;
+   color: #fff;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-weight: 700;
+   font-size: 16px;
+   text-transform: uppercase;
+   z-index: 12;
+}
+.tabs__block:nth-child(1)::after{
+   content: 'Пользователи';
+   top: 20px;
+   
+}
+.tabs__block:nth-child(2)::after{
+   content: "Вакансии";
+   top: 70px;
+}
+.button__admin-exit{
+   border: 3px solid #fff;
+   margin: 0px 10px;
+   height: 50px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 25px;
+   transition: all 0.2s ease 0s;
+}
+.button__admin-exit:hover{
+   background: rgb(241, 130, 11);
+   border-color: rgb(241, 130, 11);
+}
+.admin__title{
+   font-size: 38px;
+   margin-bottom: 10px;
+}  
+.deleteUser__button{
+   background: rgb(241, 130, 11);
+   border: none;
+   cursor: pointer;
+}
+.deleteUser__button:hover{
+   background: rgb(255, 132, 0);
+}
+.deleteUser__number{
+   display: none;
+}
+/*============ГЛАВНАЯ============*/
+/* ======== features ======= */
+.main__title {
+   font-family: 'Tapestry', cursive;
+   font-size: 120px;
+   font-weight: bold;
+   text-align: center;
+   margin-bottom: 20px;
+}
+.main__subtitle {
+   font-size: 32px;
+   font-style: italic;
+   text-align: center;
+   margin-bottom: 20px;
+   opacity: 0.7;
+}
+.features {
+   margin: 45px -20px;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+}
+.features__item {
+   width: 33.3333333%;
+   text-align: center;
+   padding: 0px 20px;
+}
+.features__title {
+   margin-top: 30px;
+   text-transform: uppercase;
+   color: #333;
+   font-weight: bold;
+   line-height: 1.2;
+   font-size: 20px;
+}
+.features__text {
+   margin-top: 20px;
+   color: #333;
+   opacity: 0.7;
+   line-height: 1.5;
+   font-size: 18px;
+}

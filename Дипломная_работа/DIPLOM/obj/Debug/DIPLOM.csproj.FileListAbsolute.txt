@@ -1,0 +1,11 @@
+C:\Users\na4i\OneDrive\Рабочий стол\Учеба\8сем\ДИПЛОМ\DIPLOM\obj\Debug\DIPLOM.csproj.AssemblyReference.cache
+C:\Users\na4i\OneDrive\Рабочий стол\Учеба\8сем\ДИПЛОМ\DIPLOM\obj\Debug\DIPLOM.csproj.SuggestedBindingRedirects.cache
+C:\Users\na4i\OneDrive\Рабочий стол\Учеба\8сем\ДИПЛОМ\DIPLOM\obj\Debug\DIPLOM.BALDA.resources
+C:\Users\na4i\OneDrive\Рабочий стол\Учеба\8сем\ДИПЛОМ\DIPLOM\obj\Debug\DIPLOM.Properties.Resources.resources
+C:\Users\na4i\OneDrive\Рабочий стол\Учеба\8сем\ДИПЛОМ\DIPLOM\obj\Debug\DIPLOM.csproj.GenerateResource.cache
+C:\Users\na4i\OneDrive\Рабочий стол\Учеба\8сем\ДИПЛОМ\DIPLOM\obj\Debug\DIPLOM.csproj.CoreCompileInputs.cache
+C:\Users\na4i\OneDrive\Рабочий стол\Учеба\8сем\ДИПЛОМ\DIPLOM\bin\Debug\DIPLOM.exe.config
+C:\Users\na4i\OneDrive\Рабочий стол\Учеба\8сем\ДИПЛОМ\DIPLOM\bin\Debug\DIPLOM.exe
+C:\Users\na4i\OneDrive\Рабочий стол\Учеба\8сем\ДИПЛОМ\DIPLOM\bin\Debug\DIPLOM.pdb
+C:\Users\na4i\OneDrive\Рабочий стол\Учеба\8сем\ДИПЛОМ\DIPLOM\obj\Debug\DIPLOM.exe
+C:\Users\na4i\OneDrive\Рабочий стол\Учеба\8сем\ДИПЛОМ\DIPLOM\obj\Debug\DIPLOM.pdb

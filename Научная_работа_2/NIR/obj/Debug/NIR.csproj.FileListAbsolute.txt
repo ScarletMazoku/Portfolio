@@ -1,0 +1,8 @@
+C:\Users\na4i\OneDrive\Рабочий стол\Учеба\7сем\НИР\NIR\obj\Debug\NIR.csproj.AssemblyReference.cache
+C:\Users\na4i\OneDrive\Рабочий стол\Учеба\7сем\НИР\NIR\obj\Debug\NIR.csproj.SuggestedBindingRedirects.cache
+C:\Users\na4i\OneDrive\Рабочий стол\Учеба\7сем\НИР\NIR\obj\Debug\NIR.csproj.CoreCompileInputs.cache
+C:\Users\na4i\OneDrive\Рабочий стол\Учеба\7сем\НИР\NIR\bin\Debug\NIR.exe.config
+C:\Users\na4i\OneDrive\Рабочий стол\Учеба\7сем\НИР\NIR\bin\Debug\NIR.exe
+C:\Users\na4i\OneDrive\Рабочий стол\Учеба\7сем\НИР\NIR\bin\Debug\NIR.pdb
+C:\Users\na4i\OneDrive\Рабочий стол\Учеба\7сем\НИР\NIR\obj\Debug\NIR.exe
+C:\Users\na4i\OneDrive\Рабочий стол\Учеба\7сем\НИР\NIR\obj\Debug\NIR.pdb
